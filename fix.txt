@@ -1,0 +1,14 @@
+fix: print pSsid from array instead of pointer
+人话：修复日志中ssid后乱码
+https://github.com/MeIsReallyBa/padavan-4.4/pull/92/commits/a8cf7c356671b9eb20346d92d90a7b8f4c66f41c#diff-c65297fae625331fb2cb7633ec709bb906510e7a98475935dae27d5667aa1c33L596
+
+https://www.right.com.cn/forum/thread-8092383-1-1.html
+修改 /trunk/user/shared/defaults.c 改默认设置
+{ "ip6_dns_auto", "1" },        开启自动获取 IPV6 DNS:   懒，省的再设置
+{ "ip6_lan_auto", "1" },        开启通过 DHCP 获取内网 IPv6 地址:   懒，省的再设置
+{ "sfe_enable", "0" },                shortcut-fe 加速:默认关闭   开启用久了会越来越卡
+{ "sshd_enable", "0" },        启用 SSH 服务器:默认关闭   普通人开启也没用
+
+padavan 编译设置默认LAN地址等默认信息
+https://www.leftso.com/article/756.html
+路径 trunk/user/shared/defaults.h
